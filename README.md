@@ -1,8 +1,8 @@
-Name : KASAM DILEEP REDDY
-Company : CODTECH IT SOLUTIONS
-ID : CT12WEJF 
-Domain : PYTHON PROGRAMMING
-Duration : DEC to March2025
+**Name : **KASAM DILEEP REDDY
+**Company : **CODTECH IT SOLUTIONS
+**ID : **CT12WEJF 
+**Domain : **PYTHON PROGRAMMING
+**Duration : **DEC to March2025
 
 ##Overview Of The Project
 
