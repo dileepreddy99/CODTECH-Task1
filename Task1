@@ -1,0 +1,57 @@
+/*I have created a basic calculator that allows users to perform four mathematical operations: addition, subtraction, multiplication, and division.
+The program prompts the user to:
+Enter two numbers.
+Choose an operation by selecting from the displayed menu. 
+validated the operation choice to ensure the user selects a valid number between 1 and 4.
+I converted the entered numbers to floating-point values to allow calculations with decimal numbers.
+The program raises an error if an invalid operation is selected.
+It prevents division by zero and informs the user when this occurs.
+It uses try and except blocks to catch unexpected errors and display appropriate messages
+The program displays the operation performed and the result in a clear format, e.g., 5 + 3 = 8.
+*/
+
+def calculator():
+    print("Welcome to the Basic Calculator!")
+    print("Select an operation to perform:")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
+
+    # taking the input from user
+    try:
+        operation = int(input("Enter the number corresponding to the operation (1/2/3/4): "))
+        if operation not in [1, 2, 3, 4]:
+            raise ValueError("Invalid operation selected. Please choose between 1 and 4.")
+
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+
+        # Performing the calculation based on the selected operation
+        if operation == 1:
+            result = num1 + num2
+            operation_symbol = "+"
+        elif operation == 2:
+            result = num1 - num2
+            operation_symbol = "-"
+        elif operation == 3:
+            result = num1 * num2
+            operation_symbol = "*"
+        elif operation == 4:
+            if num2 == 0:
+                raise ZeroDivisionError("Division by zero is not allowed.")
+            result = num1 / num2
+            operation_symbol = "/"
+
+        # Displaying the result
+        print(f"\nResult: {num1} {operation_symbol} {num2} = {result}")
+
+    except ValueError as ve:
+        print(f"Error: {ve}")
+    except ZeroDivisionError as zde:
+        print(f"Error: {zde}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+if __name__ == "__main__":
+    calculator()
